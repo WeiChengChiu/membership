@@ -39,6 +39,13 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # For user register management
 gem "devise"
 
+#<!-- testing gems -->
+group :development, :test do
+  gem "rspec-rails"
+  gem "fabrication" # fake object
+  gem "faker"       # fake data
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
