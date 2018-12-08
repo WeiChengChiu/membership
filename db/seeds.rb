@@ -1,5 +1,5 @@
 puts 'Starting db seeds'
-puts "尋找或創建帳號: test01@gmail.com"
+puts "尋找或創建 admin帳號: test01@gmail.com"
 
 email = 'test01@gmail.com'
 password = 12345678
@@ -10,11 +10,12 @@ unless user
   user = User.new(
     email: email,
     password: password,
-    password_confirmation: password
+    password_confirmation: password,
+    role: 'admin'
   )
   user.save!
   user.encrypted_password = encrypted_password
   user.save
 end
 
-puts "可以使用帳號: test01@gmail.com, 密碼12345678"
+puts "可以使用admin帳號: test01@gmail.com, 密碼: 12345678"
