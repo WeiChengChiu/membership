@@ -42,6 +42,7 @@ gem "devise"
 #<!-- testing gems -->
 group :development, :test do
   gem "rspec-rails"
+  gem "rails-controller-testing" # assert_template has been extracted to this gem
   gem "fabrication" # fake object
   gem "faker"       # fake data
 end
