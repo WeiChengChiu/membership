@@ -1,24 +1,11 @@
-# README
+# How To Use
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Download git repo
+- git clone https://github.com/WeiChengChiu/membership.git
 
-Things you may want to cover:
+## Build and Run RoR development docker container
+- cd membership
+- bundle
+- rake db:seed (before run rspec)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+(default username/password: test01@gmail.com/12345678)
