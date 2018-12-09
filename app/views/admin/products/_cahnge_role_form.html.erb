@@ -2,7 +2,7 @@
   <%= simple_form_for user, url: update_role_admin_user_path(user), method: :post do |f| %>
   <%= f.hidden_field :id, value: user.id %>
     <div class="form-actions">
-      <%= f.submit "Change to Admin", disable_with: 'Submiting...', class: "btn btn-warning" %>
+      <%= f.submit "Change", disable_with: 'Submiting...', class: "btn btn-warning" %>
     </div>
   <% end %>
 </div>
