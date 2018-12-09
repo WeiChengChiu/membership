@@ -39,6 +39,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # For user register management
 gem "devise"
 
+# Facilitate CSS
+gem 'bootstrap-sass'
+
 #<!-- testing gems -->
 group :development, :test do
   gem "rspec-rails"
