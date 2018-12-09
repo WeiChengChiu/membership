@@ -8,4 +8,5 @@
 - bundle
 - rake db:seed (before run rspec)
 
-(default username/password: test01@gmail.com/12345678)
+(default admin email/password: admin01@gmail.com/12345678)
+(default user email/password: user01@gmail.com/12345678)

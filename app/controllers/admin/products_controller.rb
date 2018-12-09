@@ -5,13 +5,6 @@ class Admin::ProductsController < ApplicationController
   layout 'admin'
 
   def index
+    @users = User.all
   end
-
-  protected
-    def check_admin
-        unless current_user.admin?
-            raise ActiveRecord::RecordNotFound
-            return
-        end
-    end
 end

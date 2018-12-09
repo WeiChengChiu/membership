@@ -4,5 +4,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :products, except: :destroy
+    resources :users, only: [] do
+      member do
+        post :update_role
+      end
+    end
   end
 end

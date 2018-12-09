@@ -7,7 +7,7 @@ RSpec.describe "Sign in", type: :feature do
 
   let(:admin) {
     {
-      email: 'test01@gmail.com',
+      email: 'admin01@gmail.com',
       password: 12345678
     }
   }
