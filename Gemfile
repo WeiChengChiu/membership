@@ -42,6 +42,9 @@ gem "devise"
 # Facilitate CSS
 gem 'bootstrap-sass'
 
+# Facilitate forms
+gem 'simple_form'
+
 #<!-- testing gems -->
 group :development, :test do
   gem "rspec-rails"
