@@ -26,6 +26,10 @@ RSpec.describe Product, type: :model do
       it "lack of image" do
         expect(Product.new(name: product.name, price: product.price)).not_to be_valid
       end
+
+      it "product discount price" do
+        expect(product.discount_price).to eq(product.price * 0.8)
+      end
     end
   end
 end
