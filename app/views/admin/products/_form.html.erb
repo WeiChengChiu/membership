@@ -1,0 +1,14 @@
+<div class="input-group mb-3">
+  <%= form.input :name, required: true %>
+</div>
+
+<div class="input-group mb-3">
+  <%= form.input :price, required: true, input_html: { min: 0, max: 9999 } %>
+</div>
+
+<div class="input-group mb-3">
+  <%= form.input :image, as: :file, required: true %>
+  <% if product.image.exists? %>
+    <td><%= image_tag product.image.url(:thumb) %></td>
+  <% end %>
+</div>

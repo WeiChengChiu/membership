@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :admin do
-    resources :products, except: :destroy
+    resources :products, except: [:show, :destroy]
     resources :users, only: [] do
       member do
         post :update_role

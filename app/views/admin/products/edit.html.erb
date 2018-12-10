@@ -1,0 +1,7 @@
+<H4>Edit Product</H4>
+<%= simple_form_for @product, url: admin_product_path(@product) do |form| %>
+  <%= form.error_notification %>
+  <%= render 'form', form: form, product: @product %>
+  <%= form.submit %>
+<% end %>
+<%= link_to "Back", :back %>
