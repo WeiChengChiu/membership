@@ -1,9 +1,16 @@
 <% if current_user %>
+  <H4>User: <%= current_user.email %></H4>
+  <H4>Premium: <%= current_user.is_premium %></H4>
   <%= link_to('登出', destroy_user_session_path, :method => :delete) %> |
   <%= link_to('修改密碼', edit_registration_path(:user)) %>
 <% else %>
+  <H4>For porduct discount, login and purchase premium</H4>
   <%= link_to('註冊', new_registration_path(:user)) %> |
   <%= link_to('登入', new_session_path(:user)) %>
+<% end %>
+
+<% if current_user && (current_user.is_premium == false) %>
+  <%= render partial: 'purchase_premium_form', locals: { user: current_user } %>
 <% end %>
 
 <div class="span12">

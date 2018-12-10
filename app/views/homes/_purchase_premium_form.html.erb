@@ -1,0 +1,10 @@
+<div class="span12">
+  <%= simple_form_for user, url: purchase_premium_user_path(user), method: :post do |f| %>
+  <%= f.hidden_field :id, value: user.id %>
+    <div class="form-actions">
+      <H4>Purchase Premium:
+        <%= f.submit "Purchase", disable_with: 'Submiting...', class: "btn btn-warning" %>
+      </H4>
+    </div>
+  <% end %>
+</div>
