@@ -17,8 +17,10 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
+      flash[:notice] = "Successfully create #{@product.name}"
       redirect_to admin_products_path
     else
+      flash[:alert] = "Create error"
       render :new
     end
   end
@@ -41,7 +43,7 @@ class Admin::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :price, :image)
+    params.require(:product).permit( :name, :price, :image)
   end
 
   def find_product

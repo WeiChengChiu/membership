@@ -1,4 +1,5 @@
 Fabricator(:product) do
   name  "MyString"
-  price "9.99"
+  price 100
+  image File.open("#{Rails.root}/spec/fixtures/images/pikachu.png")
 end

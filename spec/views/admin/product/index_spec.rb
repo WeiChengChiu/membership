@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "admin/products/index", type: :view do
+RSpec.describe "admin/products/index.html.erb", type: :view do
   it "can renders with login" do
     @users = User.all
     @products = Product.all
