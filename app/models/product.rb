@@ -4,4 +4,8 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :price, presence: true
   validates :image, presence: true
+
+  def discount_price
+    self.price * 0.8
+  end
 end

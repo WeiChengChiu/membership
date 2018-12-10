@@ -22,6 +22,9 @@
       <tr>
         <th>Name</th>
         <th>Price</th>
+        <% if current_user.try(:is_premium) %>
+          <th>Discount Price</th>
+        <% end %>
         <th>Image</th>
       </tr>
     </thead>
@@ -30,6 +33,9 @@
         <tr>
           <td><%= product.name %></td>
           <td><%= product.price %></td>
+          <% if current_user.try(:is_premium) %>
+            <th><%= product.discount_price %></th>
+          <% end %>
           <% if product.image.exists? %>
             <td><%= image_tag product.image.url(:thumb) %></td>
           <% else %>
