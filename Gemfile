@@ -45,6 +45,9 @@ gem 'bootstrap-sass'
 # Facilitate forms
 gem 'simple_form'
 
+# Facilitate image upload
+gem 'paperclip'
+
 #<!-- testing gems -->
 group :development, :test do
   gem "rspec-rails"
