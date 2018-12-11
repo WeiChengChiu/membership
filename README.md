@@ -7,6 +7,7 @@ Environment: ruby 2.5.3, rails 5.2.2
 ## Build and Run Rails project
 - cd membership
 - bundle
+- rake db:create
 - rake db:migrate
 - rake db:seed (before run rspec)
 - rails server
