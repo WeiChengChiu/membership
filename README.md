@@ -11,5 +11,6 @@ Environment: ruby 2.5.3, rails 5.2.2
 - rake db:seed (before run rspec)
 - rails server
 
-(default admin email/password: admin01@gmail.com/12345678)
-(default user email/password: user01@gmail.com/12345678)
+## Default Account
+-  Admin email: admin01@gmail.com, password: 12345678
+-  User email: user01@gmail.com, password: 12345678
