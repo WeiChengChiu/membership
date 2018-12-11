@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Sign in", type: :feature do
-  let(:existing_user) {
+  let(:user) {
     Fabricate(:user)
   }
 
@@ -15,8 +15,8 @@ RSpec.describe "Sign in", type: :feature do
   describe "POST /users/sign_in" do
     it "normal user sign_in" do
       visit "/users/sign_in"
-      fill_in "Email", with: existing_user.email
-      fill_in "Password", with: existing_user.password
+      fill_in "Email", with: user.email
+      fill_in "Password", with: user.password
       click_button "Log in"
 
       expect(page).to have_content "Signed in successfully."
@@ -43,7 +43,7 @@ RSpec.describe "Sign in", type: :feature do
 
     it "Email be blank" do
       visit "/users/sign_in"
-      fill_in "Password", with: existing_user.password
+      fill_in "Password", with: user.password
       click_button "Log in"
 
       expect(page).to have_content "Invalid Email or password."
@@ -53,7 +53,7 @@ RSpec.describe "Sign in", type: :feature do
     it "Invalid Email" do
       visit "/users/sign_in"
       fill_in "Email", with: 'error@emailerrorerror'
-      fill_in "Password", with: existing_user.password
+      fill_in "Password", with: user.password
       click_button "Log in"
 
       expect(page).to have_content "Invalid Email or password."
@@ -62,7 +62,7 @@ RSpec.describe "Sign in", type: :feature do
 
     it "Password be blank" do
       visit "/users/sign_in"
-      fill_in "Email", with: existing_user.email
+      fill_in "Email", with: user.email
       click_button "Log in"
 
       expect(page).to have_content "Invalid Email or password."
@@ -71,8 +71,8 @@ RSpec.describe "Sign in", type: :feature do
 
     it "Invalid Password" do
       visit "/users/sign_in"
-      fill_in "Email", with: existing_user.email
-      fill_in "Password", with: existing_user.email
+      fill_in "Email", with: user.email
+      fill_in "Password", with: user.email
       click_button "Log in"
 
       expect(page).to have_content "Invalid Email or password."
