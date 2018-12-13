@@ -48,6 +48,9 @@ gem 'simple_form'
 # Facilitate image upload
 gem 'paperclip'
 
+# Facilitate paginate
+gem 'will_paginate'
+
 #<!-- testing gems -->
 group :development, :test do
   gem "rspec-rails"

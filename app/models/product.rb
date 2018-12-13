@@ -5,7 +5,10 @@ class Product < ApplicationRecord
   validates :price, presence: true
   validates :image, presence: true
 
+  self.per_page = 10
+
   def discount_price
-    self.price * 0.8
+    discount_percentage = Rails.application.config.discount_percentage
+    self.price * discount_percentage
   end
 end

@@ -28,7 +28,8 @@ RSpec.describe Product, type: :model do
       end
 
       it "product discount price" do
-        expect(product.discount_price).to eq(product.price * 0.8)
+        discount_percentage = Rails.application.config.discount_percentage
+        expect(product.discount_price).to eq(product.price * discount_percentage)
       end
     end
   end

@@ -4,7 +4,7 @@ class Admin::UsersController < ApplicationController
 
   def update_role
     user = User.find_by(id: params[:id])
-    if user && user.role == nil
+    if user.role == nil
       user.update(role: 'admin')
       flash[:notice] = "Successfully update #{user.email} to admin"
     else
